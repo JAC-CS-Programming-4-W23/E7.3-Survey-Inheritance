@@ -15,9 +15,9 @@ public class Survey {
 
     // Fields
 
-    private String title;
-    private List<Questionable> questions;
-    private List<Response> responses;
+    private final String title;
+    private final List<Question> questions;
+    private final List<Response> responses;
 
     // Constructors
 
@@ -37,7 +37,7 @@ public class Survey {
      * Add a question to the end of the survey.
      * @param question The question to add to the survey.
      */
-    public void addQuestion(Questionable question) {
+    public void addQuestion(Question question) {
         questions.add(question);
     }
 
@@ -48,7 +48,7 @@ public class Survey {
     public void administer(Scanner input) {
         System.out.println(title);
         System.out.println();
-        for(Questionable question : questions)
+        for(Question question : questions)
             responses.add(askQuestion(input, question));
     }
 
@@ -61,11 +61,11 @@ public class Survey {
     }
 
     // perform a single question from the survey.
-    private Response askQuestion(Scanner in, Questionable question) {
+    private Response askQuestion(Scanner in, Question question) {
 
         String response;
         boolean first = true;  // tracks whether the question is new or is being re-asked.
-        boolean requiredCheck;  // tracks whether an required question is not-blank
+        boolean requiredCheck;  // tracks whether a required question is not-blank
 
         do {
 

@@ -7,13 +7,7 @@ package survey;
 /**
  * Yes/No "questions" expect a "yes" or "no" as a response.
  */
-public class YesNoQuestion implements Questionable {
-
-    // Fields
-
-    private final String title;
-    private final String question;
-    private final boolean required;
+public class YesNoQuestion extends Question {
 
     // Constructors
 
@@ -26,27 +20,10 @@ public class YesNoQuestion implements Questionable {
     }
 
     public YesNoQuestion(String title, String question, boolean required) {
-        this.title = title;
-        this.question = question;
-        this.required = required;
+        super(title, question, required);
     }
 
     // Methods
-
-    @Override
-    public String getTitle() {
-        return title;
-    }
-
-    @Override
-    public String getQuestion() {
-        return question;
-    }
-
-    @Override
-    public boolean isRequired() {
-        return required;
-    }
 
     @Override
     public boolean isValidResponse(String response) {

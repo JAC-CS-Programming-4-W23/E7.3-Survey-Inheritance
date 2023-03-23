@@ -7,13 +7,7 @@ package survey;
 /**
  * Question "questions" expect a question as a response, so something ending in a '?'.
  */
-public class QuestionQuestion implements Questionable {
-
-    // Fields
-
-    private final String title;
-    private final String question;
-    private final boolean required;
+public class QuestionQuestion extends Question {
 
     // Constructors
 
@@ -26,27 +20,10 @@ public class QuestionQuestion implements Questionable {
     }
 
     public QuestionQuestion(String title, String question, boolean required) {
-        this.title = title;
-        this.question = question;
-        this.required = required;
+        super(title, question, required);
     }
 
     // Methods
-
-    @Override
-    public String getTitle() {
-        return title;
-    }
-
-    @Override
-    public String getQuestion() {
-        return question;
-    }
-
-    @Override
-    public boolean isRequired() {
-        return required;
-    }
 
     @Override
     public boolean isValidResponse(String response) {

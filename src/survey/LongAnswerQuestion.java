@@ -7,13 +7,7 @@ package survey;
 /**
  * Long-answer style questions expect a response containing any amount of text.
  */
-public class LongAnswerQuestion implements Questionable {
-
-    // Fields
-
-    private String title;
-    private String question;
-    private boolean required;
+public class LongAnswerQuestion extends Question {
 
     // Constructors
 
@@ -26,27 +20,10 @@ public class LongAnswerQuestion implements Questionable {
     }
 
     public LongAnswerQuestion(String title, String question, boolean required) {
-        this.title = title;
-        this.question = question;
-        this.required = required;
+        super(title, question, required);
     }
 
     // Methods
-
-    @Override
-    public String getTitle() {
-        return title;
-    }
-
-    @Override
-    public String getQuestion() {
-        return question;
-    }
-
-    @Override
-    public boolean isRequired() {
-        return required;
-    }
 
     @Override
     public boolean isValidResponse(String response) {

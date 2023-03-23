@@ -52,7 +52,7 @@ public class Main {
         Survey survey = new Survey("Welcome to Programming IV!");
 
         survey.addQuestion(new ShortAnswerQuestion("Q1.", "What name would you like me to use when addressing you?", 30, true));
-        survey.addQuestion(new ShortAnswerQuestion("Q2.", "What is your github username?", 39,true));
+        survey.addQuestion(new ShortAnswerQuestion("Q2.", "What is your GitHub username?", 39,true));
         survey.addQuestion(new ShortAnswerQuestion("Q3.", "What are your pronouns? (ex: she/her)", 30));
         survey.addQuestion(new ShortAnswerQuestion("Q4.", "What is your favourite programming language?"));
         survey.addQuestion(new LongAnswerQuestion("Q5.", "What motivates you to code?"));

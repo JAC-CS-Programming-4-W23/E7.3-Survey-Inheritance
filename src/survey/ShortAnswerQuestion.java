@@ -7,15 +7,10 @@ package survey;
 /**
  * Short-answer style questions expect a response containing a limited length of text.
  */
-public class ShortAnswerQuestion implements Questionable {
+public class ShortAnswerQuestion extends Question {
 
     private static final int DEFAULT_LENGTH = 128;
 
-    // Fields
-
-    private String title;
-    private String question;
-    private boolean required;
     private int limit;
 
     // Constructors
@@ -37,28 +32,12 @@ public class ShortAnswerQuestion implements Questionable {
     }
 
     public ShortAnswerQuestion(String title, String question, int limit, boolean required) {
-        this.title = title;
-        this.question = question;
+        super(title, question, required);
+
         this.limit = limit;
-        this.required = required;
     }
 
     // Methods
-
-    @Override
-    public String getTitle() {
-        return title;
-    }
-
-    @Override
-    public String getQuestion() {
-        return question;
-    }
-
-    @Override
-    public boolean isRequired() {
-        return required;
-    }
 
     @Override
     public boolean isValidResponse(String response) {
