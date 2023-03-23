@@ -2,8 +2,6 @@
  * Copyright (c) 2021 Ian Clement. All rights reserved.
  */
 
-package survey;
-
 /**
  * Question "questions" expect a question as a response, so something ending in a '?'.
  */

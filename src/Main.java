@@ -51,15 +51,15 @@ public class Main {
     private static Survey createIntroductionSurvey() {
         Survey survey = new Survey("Welcome to Programming IV!");
 
-        survey.addQuestion(new ShortAnswerQuestion("Q1.", "What name would you like me to use when addressing you?", 30, true));
-        survey.addQuestion(new ShortAnswerQuestion("Q2.", "What is your github username?", 39,true));
-        survey.addQuestion(new ShortAnswerQuestion("Q3.", "What are your pronouns? (ex: she/her)", 30));
-        survey.addQuestion(new ShortAnswerQuestion("Q4.", "What is your favourite programming language?"));
-        survey.addQuestion(new LongAnswerQuestion("Q5.", "What motivates you to code?"));
-        survey.addQuestion(new LongAnswerQuestion("Q6.", "What is your favourite text editor?"));
-        survey.addQuestion(new LongAnswerQuestion("Q7.", "If you could choose to do anything for a day, what would it be?"));
-        survey.addQuestion(new LongAnswerQuestion("Q8.", "Is there anything you'd like me to know in particular about you?"));
-        survey.addQuestion(new QuestionQuestion("Q9.", "Ask me a question!"));
+//        survey.addQuestion(new ShortAnswerQuestion("Q1.", "What name would you like me to use when addressing you?", 30, true));
+//        survey.addQuestion(new ShortAnswerQuestion("Q2.", "What is your github username?", 39,true));
+//        survey.addQuestion(new ShortAnswerQuestion("Q3.", "What are your pronouns? (ex: she/her)", 30));
+//        survey.addQuestion(new ShortAnswerQuestion("Q4.", "What is your favourite programming language?"));
+//        survey.addQuestion(new LongAnswerQuestion("Q5.", "What motivates you to code?"));
+//        survey.addQuestion(new LongAnswerQuestion("Q6.", "What is your favourite text editor?"));
+//        survey.addQuestion(new LongAnswerQuestion("Q7.", "If you could choose to do anything for a day, what would it be?"));
+//        survey.addQuestion(new LongAnswerQuestion("Q8.", "Is there anything you'd like me to know in particular about you?"));
+//        survey.addQuestion(new QuestionQuestion("Q9.", "Ask me a question!"));
         MultipleChoiceQuestion question = new MultipleChoiceQuestion("Q10.", "Which food is best?");
 
         question.addChoice("a) Pizza");
@@ -68,7 +68,7 @@ public class Main {
         question.addChoice("d) Poutine");
 
         survey.addQuestion(question);
-        survey.addQuestion(new YesNoQuestion("Q11.", "Tacos or pizza?"));
+//        survey.addQuestion(new YesNoQuestion("Q10.", "Tacos or pizza?"));
 
         return survey;
     }
